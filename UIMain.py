@@ -148,7 +148,7 @@ if __name__ == "__main__":
     green_size = wx.DisplaySize()
     a = green_size[0]*0.7
     b = green_size[1]*0.85
-    frame = GuiMainFrame((a, b))
+    frame = GuiMainFrame((int(a), int(b)))
     frame.Show()
     app.MainLoop()
 
