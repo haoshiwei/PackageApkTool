@@ -8,19 +8,20 @@
 import subprocess
 import os
 import platform
-from ConfigUtils import *
+
+
 
 
 # 执行cmd命令
 def execute_command(cmd):
     # status, result = subprocess.getstatusoutput(cmd)  #  python3.4
-    print u'%s\n' % cmd
+    print(u'%s\n' % cmd)
     system = platform.system()
     if system == 'Windows':
         res = subprocess.Popen(cmd, shell=isinstance(cmd, basestring), stdin=subprocess.PIPE,
                                stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
         sout, serr = res.communicate()
-        print sout.decode('cp936').encode('utf-8')
+        print(sout.decode('cp936').encode('utf-8'))
         return res.returncode, sout.decode('cp936').encode('utf-8')
 
     else:

@@ -4,7 +4,7 @@
 import re
 from utils.LogUtils import *
 from utils.ConfigUtils import *
-from MergeXmlUitls import *
+
 
 # 合并Manifest.xml目录资源的库
 

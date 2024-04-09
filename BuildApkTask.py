@@ -58,7 +58,7 @@ class BuildApkTask(object):
                     self.NewOutputApkPath = setting_config['game_channel_apk_output_path']
 
             except Exception as e:
-                print str(e)
+                print(str(e))
 
         # 打包过程日志输出目录
         self.logger = LogUtils.sharedInstance(taskId)

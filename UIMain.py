@@ -45,7 +45,7 @@ class GuiMainFrame(wx.Frame):
         self.channelPanel = JChannelPanel(self.child_spWindow, self.windowFrame, self.up_data_ui)  # 在子分割窗上创建右面板
 
         self.spWindow.SplitHorizontally(self.up_panel, self.down_panel, 0)
-        self.child_spWindow.SplitVertically(self.resourcePanel, self.channelPanel, self.left)
+        self.child_spWindow.SplitVertically(self.resourcePanel, self.channelPanel, int(self.left))
         self.Bind(wx.EVT_ERASE_BACKGROUND, self.on_erase_back)
 
         # 工具栏
@@ -118,7 +118,7 @@ class GuiMainFrame(wx.Frame):
     def on_erase_back(self, event):
         if self.first < 2 or self.flag:
             self.spWindow.SetSashPosition(0)
-            self.child_spWindow.SetSashPosition(self.left)
+            self.child_spWindow.SetSashPosition(int(self.left))
             self.first = self.first + 1
         self.Refresh()
 

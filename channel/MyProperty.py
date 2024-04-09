@@ -19,7 +19,7 @@ class Properties:
                 if line.find('=') > 0 and not line.startswith('#'):
                     strs = line.split('=')
                     self.properties[strs[0].strip()] = strs[1].strip()
-        except Exception, e:
+        except Exception as e:
             raise e
         else:
             fopen.close()
@@ -86,8 +86,7 @@ def replace_property(file_name, key, value, append_on_not_exists=True):
 
         tmpfile.close()
     else:
-        print "file %s not found" % file_name
-
+        print("file %s not found" % file_name)
 
 # # 原始代码无法原格式修改。有bug, 无法处理文件的key值前后空格问题,导致已有key还会添加。
 # def replace_property(file_name, from_regex, to_str, append_on_not_exists=True):

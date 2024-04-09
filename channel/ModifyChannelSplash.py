@@ -2,6 +2,8 @@
 # -*-coding:utf-8 -*-
 
 import os,json
+import xml
+
 from utils.ConfigUtils import *
 from xml.dom.minidom import *
 
@@ -71,7 +73,7 @@ def modify_splash_and_gameMain(game_path, channel_id, channel_version, config):
                                  package_name, gameMainActivity)
 
         else:
-            print u'游戏没有接入SDK闪屏'
+            print(u'游戏没有接入SDK闪屏')
             # todo 游戏没有接入SDK闪屏,提示打包失败
 
         # 保存修改后的文件
@@ -93,7 +95,7 @@ def modify_splash_and_gameMain(game_path, channel_id, channel_version, config):
 def sdk_first_splash(channel_id, channel_version, activity_nodes, launcher_activity, sdk_tag_activities,
                      package_name, gameMainActivity=None):
 
-    print u'SDK先闪屏，channel_id: %s' % channel_id
+    print (u'SDK先闪屏，channel_id: %s' % channel_id)
 
     if channel_id == '36':  # 联想渠道
         modify_lenovo_splash(channel_version, sdk_tag_activities, gameMainActivity)

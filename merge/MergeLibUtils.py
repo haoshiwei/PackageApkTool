@@ -2,7 +2,9 @@
 # -*- coding:utf-8 -*-
 
 import os, zipfile, shutil, re
-from ruamel import yaml
+
+import yaml
+
 from utils.LogUtils import *
 from utils.ShellUtils import *
 

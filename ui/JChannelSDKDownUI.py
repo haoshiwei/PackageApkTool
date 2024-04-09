@@ -1,13 +1,15 @@
 #!/usr/bin/env python
 # -*-coding:utf-8 -*-
 from __future__ import print_function
+
+import requests
 import wx
 import os
 import shutil
 import json
 import platform
 import threading
-import requests
+
 from contextlib import closing
 import wx.lib.agw.ultimatelistctrl as ULC
 from utils.ConfigUtils import *

@@ -3,10 +3,10 @@
 
 from BuildApkTask import *
 
-
 """ 本地打包任务入口 """
-def startBuildApkTask():
 
+
+def startBuildApkTask():
     """
     # taskId                       任务ID
     # gameName                     游戏名称
@@ -26,7 +26,7 @@ def startBuildApkTask():
     """
 
     # 基准包任务
-    task = BuildApkTask('180', 'TESTGame', '1', '1.0.0', 'GameSDKFrame.apk', 'lexiang' '1', '1.0.0')
+    task = BuildApkTask('180', 'TESTGame', '1', '1.0.0', 'GameSDKFrame.apk', 'lexiang' '1', '1.0.0', "true")
     # 开始打包任务
     task.buildApk()
 

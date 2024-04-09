@@ -151,7 +151,7 @@ class PackageApkPanel(wx.Panel):
                     thread.start()
 
             except Exception as e:
-                print e
+                print(e)
 
     # 显示提示信息
     def show_message(self, msg):

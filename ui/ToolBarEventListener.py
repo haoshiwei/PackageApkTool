@@ -20,7 +20,7 @@ class ToolBarEventListener(object):
         frame = window
 
         wildcard_text = '*.apk'
-        game_apk_file_path = self.on_choose_file(frame, wildcard_text, u"选择游戏APK文件", os.getcwd().decode('GB2312').encode('utf-8'))
+        game_apk_file_path = self.on_choose_file(frame, wildcard_text, u"选择游戏APK文件", os.getcwd().encode('utf-8'))
 
         config_str = {}
         if game_apk_file_path:
@@ -117,4 +117,4 @@ class ToolBarEventListener(object):
                     uiConfig.write(json.dumps(compile_config, ensure_ascii=False))
 
         except Exception as e:
-            print e
+            print(e)

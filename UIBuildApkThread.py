@@ -3,8 +3,10 @@
 
 import os
 import sys
+from importlib import reload
+
 reload(sys)
-sys.setdefaultencoding('utf8')
+
 
 import threading
 from BuildApkTask import *
